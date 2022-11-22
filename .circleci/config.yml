@@ -36,9 +36,10 @@ jobs:
       - run:
           name: Run Sonar scanner
           command: sonar-scanner
-# workflows:
-#   version: 2.1
-#   build_and_test:
-#     jobs:
-#       - build:
-#           context: SonarCloud
+workflows:
+  version: 2.1
+  build_and_test:
+    jobs:
+        - build
+      # - build:
+          # context: SonarCloud
