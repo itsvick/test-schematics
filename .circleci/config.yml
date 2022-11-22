@@ -22,7 +22,7 @@ jobs:
           paths:
             - node_modules
       - run:
-          name: Test QuML
+          name: Test Project
           command: npm run test-lib-ci
       - run:
           name: Install sonar scanner
@@ -30,3 +30,8 @@ jobs:
       - run:
           name: Run Sonar scanner
           command: sonar-scanner
+workflows:
+  version: 2.1
+  build_and_test:
+    jobs:
+      - build
