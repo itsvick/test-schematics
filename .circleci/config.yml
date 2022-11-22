@@ -11,9 +11,6 @@ jobs:
       - restore_cache:
           keys:
             - node_modules_cache_{{ checksum "package-lock.json" }}
-      - run: 
-          name: Install QuML Library dependencies
-          command: cd projects/quml-library &&  npm install --no-progress
       - run:
           name: Install project dependencies
           command: |
