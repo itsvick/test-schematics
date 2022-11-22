@@ -1,13 +1,19 @@
 version: 2.1
+orbs:
+  browser-tools: circleci/browser-tools@1.1.0
 jobs:
   build:
     docker:
       - image: cimg/node:14.21.1-browsers
     steps:
+      - browser-tools/install-browser-tools
       - checkout
       - run:
           name: Check current version of node
           command: node -v
+      - run: 
+          name: Chrome Version
+          command: google-chrome --version
       - restore_cache:
           keys:
             - node_modules_cache_{{ checksum "package-lock.json" }}
