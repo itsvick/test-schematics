@@ -1,3 +1,4 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=itsvick_test-schematics&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=itsvick_test-schematics)
 # TestSchematics
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.18.
