@@ -34,4 +34,5 @@ workflows:
   version: 2.1
   build_and_test:
     jobs:
-      - build
+      - build:
+          context: SonarCloud
